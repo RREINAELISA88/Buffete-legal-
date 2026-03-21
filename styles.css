@@ -10,6 +10,17 @@
      color: #090909;
      padding-top: 150px;
  }
+ 
+section {
+    padding: 90px 20px;
+}
+
+section > * {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 
  a {
      text-decoration: none;
