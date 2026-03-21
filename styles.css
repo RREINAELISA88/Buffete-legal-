@@ -164,6 +164,12 @@ section > * {
          padding: 12px 22px;
          font-size: 14px;
      }
+
+
+      .about__container {
+        padding: 20px;
+        text-align: center;
+    }
  }
 
  @media (max-width: 768px) {
