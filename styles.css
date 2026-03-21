@@ -133,7 +133,7 @@ section > * {
 /* centra el grid */
 max-width: 1200px;
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-grid-template-columns: 1fr;
+
  justify-items: center;
  /* limita el ancho */
 }
@@ -430,8 +430,9 @@ grid-template-columns: 1fr;
      padding: 20px;
      margin: 20px auto;
      /* centra el grid */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
      max-width: 1200px;
-       grid-template-columns: 1fr;
+      
         justify-items: center;
      /* limita el ancho */
 
@@ -444,7 +445,7 @@ padding: 60px;
 margin: 60px auto;
  /* centra el grid */
  max-width: 1200px;
- grid-template-columns: 1fr;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
  justify-items: center;
  /* limita el ancho */
  }
