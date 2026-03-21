@@ -145,6 +145,11 @@ section > * {
            .contact-left {
                margin-bottom: 40px;
            }
+
+      .about__container {
+        padding: 20px;
+        text-align: center;
+    }
  }
 
  @media (max-width: 768px) {
