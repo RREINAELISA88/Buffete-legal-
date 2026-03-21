@@ -79,16 +79,16 @@ section > * {
 
 
  .hero {
-     height: 100vh;
-     /* más limpio en desktop */
-     background:
-         linear-gradient(rgba(0, 0, 0, 0.209), rgba(0, 0, 0, 0.143)),
-         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center center / cover no-repeat;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     padding: 0 20px;
+ height: 100vh;
+/* más limpio en desktop */
+ background:
+ linear-gradient(rgba(0, 0, 0, 0.209), rgba(0, 0, 0, 0.143)),
+ url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center center / cover no-repeat;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding: 0 20px;
  }
 
  /* contenedor interno para controlar ancho */
@@ -125,6 +125,63 @@ section > * {
      background: #fff;
      color: #000;
  }
+ .grid-1 {
+ display: grid;
+ gap: 30px;
+ padding: 20px;
+ margin: 20px auto;
+/* centra el grid */
+max-width: 1200px;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: 1fr;
+ justify-items: center;
+ /* limita el ancho */
+}
+ .grid {
+     display: grid;
+     gap: 30px;
+     padding: 60px;
+     margin: 60px auto;
+     /* centra el grid */
+     max-width: 1200px;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        justify-items: center;
+     /* limita el ancho */
+ }
+
+
+   .card {
+    background: #1c1f26;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+   .card i {
+    font-size: 40px;
+    color: #93771e;
+    margin-bottom: 15px;
+}
+
+   .card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+    .card p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
 
 
  @media (max-width: 992px) {
@@ -342,10 +399,10 @@ section > * {
  /* AREAS*/
  /* =============*/
 
- #areas {
-     background: #ddd8d828;
-     margin-top: 50px;
-     margin-bottom: 50px;
+  #areas {
+  background: #ddd8d828;
+  margin-top: 50px;
+  margin-bottom: 50px;
  }
 
  /* =============*/
@@ -380,16 +437,16 @@ section > * {
 
  }
 
- .grid {
-     display: grid;
-     gap: 30px;
-     padding: 60px;
-     margin: 60px auto;
-     /* centra el grid */
-     max-width: 1200px;
-      grid-template-columns: 1fr;
-        justify-items: center;
-     /* limita el ancho */
+.grid {
+display: grid;
+gap: 30px;
+padding: 60px;
+margin: 60px auto;
+ /* centra el grid */
+ max-width: 1200px;
+ grid-template-columns: 1fr;
+ justify-items: center;
+ /* limita el ancho */
  }
 
  .card {
