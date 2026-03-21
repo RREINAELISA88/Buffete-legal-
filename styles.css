@@ -228,8 +228,10 @@ ABOUT (MEJORADO)
 
 /* IMAGEN */
 .about__image {
-    display: flex;
+   display: flex;
     justify-content: center;
+    align-items: center;
+     
 }
 
 .about__photo {
@@ -238,19 +240,24 @@ ABOUT (MEJORADO)
     border-radius: 15px;
     object-fit: cover;
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+     display: block;
+    margin: 0 auto;
 }
 
 /* TEXTO */
 .about__content {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .about__text {
     font-size: 1.05rem;
     line-height: 1.8;
     color: #333;
-    max-width: 500px;
+     max-width: 90%;
+    margin: 0 auto;
 }
 
 /*=========================*/
@@ -614,9 +621,20 @@ RESPONSIVE
         padding: 60px 15px;
     }
 
-    .about__container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+  .about__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__image,
+    .about__content {
+        width: 100%;
+    }
+
+    .about__text {
+        max-width: 95%;
+        font-size: 0.95rem;
         text-align: center;
     }
 
@@ -629,11 +647,7 @@ RESPONSIVE
         max-width: 250px;
     }
 
-    .about__text {
-        font-size: 0.95rem;
-        max-width: 100%;
-    }
-
+  
     .text_area {
         font-size: 1.5rem;
     }
