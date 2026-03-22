@@ -337,7 +337,8 @@ ABOUT (MEJORADO)
 ==================== */
 .blog-section {
     padding: 80px 10%;
-    background: #f7f7f7;
+    backgr
+        ound: #f7f7f7;
     text-align: center;
 }
 
@@ -408,18 +409,18 @@ ABOUT (MEJORADO)
     font-size: 1.1rem;
 }
 
-.contact-wrapper {
+   .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
-}
+   } 
 
-.contact-left {
+   .contact-left {
     display: flex;
     flex-direction: column;
     gap: 25px;
-}
+     }
 
 .contact-card {
     display: flex;
@@ -898,12 +899,12 @@ ABOUT
 
 #areas {
     background: #ddd8d828;
-    margin: 50px 0;
+    margin:auto;
 }
 
 #servicios {
     background: #ddd8d828;
-    margin: 50px 0;
+    margin:auto;
 }
 
 /* =========================
@@ -1285,5 +1286,7 @@ RESPONSIVE
         .title_valor{
             font-size: 16px;
         }
+
+   
 
 }
