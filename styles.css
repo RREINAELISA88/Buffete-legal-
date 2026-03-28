@@ -13,6 +13,7 @@ body {
     background: #ffffff;
     color: #090909;
     padding-top: 80px;
+     overflow: hidden;
 }
 /* =========================
 RESET
@@ -25,10 +26,10 @@ RESET
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background: #ffffff;
-    color: #090909;
-    padding-top: 80px;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
@@ -280,12 +281,13 @@ ABOUT (MEJORADO)
 
     .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
     max-width: 1200px;
     margin: auto;
     padding: 40px 20px;
 }
+
 
     .grid-1 {
     display: grid;
@@ -606,7 +608,11 @@ RESPONSIVE
     }
 
     section {
-        padding: 60px 20px;
+         padding: 60px 15px;
+    }
+
+      .card {
+        padding: 25px;
     }
 
     .title_valor {
