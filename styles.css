@@ -253,6 +253,9 @@ ABOUT (MEJORADO)
     align-items: center;
     text-align: center;
      text-align: justify;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .about__text {
