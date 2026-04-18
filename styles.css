@@ -252,6 +252,7 @@ ABOUT (MEJORADO)
     justify-content: center;
     align-items: center;
     text-align: center;
+     text-align: justify;
 }
 
 .about__text {
