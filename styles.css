@@ -129,7 +129,7 @@ nav {
 }
 
 .hero-content p {
-    color: var(--secondary-color);
+    color:#fff;
     font-size: 1.4rem;
     margin-bottom: 40px;
     font-weight: 400;
