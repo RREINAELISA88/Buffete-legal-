@@ -607,11 +607,42 @@ nav {
         display: flex;
     }
 
-    /* NUEVOS AJUSTES RESPONSIVOS PARA EL FOOTER */
-    .footer {
-        padding: 40px 5% 20px;       /* Reducción de espacios laterales excesivos */
-        text-align: center;
+   /* ==========================================
+       FORZAR FOOTER EN DOS COLUMNAS EN MÓVIL
+       ========================================== */
+    html body .footer {
+        padding: 40px 20px 20px !important;
+        text-align: center !important;
     }
 
-    .footer-top {
-        flex
+    html body .footer-top {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+    }
+
+    html body .footer-info {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Transformamos los enlaces en una cuadrícula limpia de 2 columnas */
+    html body .footer-links {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 16px 30px !important; /* 16px de espacio arriba/abajo y 30px entre columnas */
+        justify-items: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 320px !important; /* Para que no se estiren de más en pantallas medianas */
+        margin: 0 auto !important;   /* Centra todo el bloque de dos columnas */
+    }
+
+    html body .footer-links a {
+        display: block !important;
+        text-align: center !important;
+        white-space: nowrap !important; /* Evita que los nombres de los enlaces se corten feo */
+        font-size: 0.95rem !important;
+    }
+    }
