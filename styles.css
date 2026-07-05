@@ -2,20 +2,14 @@
    1. VARIABLES DE COLOR, FUENTES Y ESPACIADOS
    ========================================================================== */
 :root {
-    --primary-color: #0d233a;
-    /* Azul marino profundo (Autoridad) */
-    --secondary-color: #bba355;
-    /* Tu dorado corporativo #bba355 */
-    --text-dark: #222222;
-    /* Gris casi negro para textos */
-    --text-light: #555555;
-    /* Gris medio para descripciones */
-    --bg-light: #f8f9fa;
-    /* Fondo gris limpio */
+    --primary-color: #0d233a;       /* Azul marino profundo (Autoridad) */
+    --secondary-color: #bba355;     /* Tu dorado corporativo #bba355 */
+    --text-dark: #222222;           /* Gris casi negro para textos */
+    --text-light: #555555;          /* Gris medio para descripciones */
+    --bg-light: #f8f9fa;            /* Fondo gris limpio */
     --bg-white: #ffffff;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --section-spacing: 120px;
-    /* Espaciado generoso entre secciones */
+    --section-spacing: 120px;       /* Espaciado generoso entre secciones */
 }
 
 * {
@@ -38,39 +32,57 @@ a {
 }
 
 /* ==========================================================================
-   2. MENÚ DE NAVEGACIÓN (Navbar)
+   2. MENÚ DE NAVEGACIÓN (Navbar) - Ajuste Estricto y Centrado
    ========================================================================== */
 nav {
     display: flex;
-    justify-content:space-around;
-    align-items: center;
-    padding: 10px 5%;
-    background-color: var(--primary-color);
+    justify-content: space-between; /* Mantiene logo a la izquierda y el menú a la derecha */
+    align-items: center;            /* Centra verticalmente TODO (Logo, enlaces y botón) */
+    padding: 0 4%;                  /* Eliminamos el padding vertical para controlar la altura con 'height' */
+    height: 70px;                   /* Forzamos una altura fija y baja para el nav */
+    background-color: #162e4a;      /* Azul elegante un poco más claro para mejor contraste */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;               /* Evita que cualquier elemento se salga de la barra */
 }
 
-
-.logo img {
-    height:150px;
-    width: 150px;
-    object-fit: contain;
-}
-.nav-links {
+.logo {
     display: flex;
     align-items: center;
+    height: 100%;                   /* Se ajusta al tamaño del nav */
+}
+
+.logo img {
+    height: 55px;                   /* El logo ahora es más compacto para que respire por arriba y abajo */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;            /* Alineación vertical perfecta de los textos y el botón */
     list-style: none;
-    gap: 25px;
+    gap: 20px;                      /* Espacio corto y controlado entre elementos */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;            /* Centra los elementos de la lista */
 }
 
 .nav-links a {
-    color: var(--bg-white);
+    color: #ffffff;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;            /* Evita que se rompa el texto */
 }
 
 .nav-links a:hover {
@@ -79,27 +91,27 @@ nav {
 
 /* Botón de WhatsApp integrado en menú */
 .mobile-whatsapp .social-btn {
-    background-color:#bba355;
-    color: white;
-    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 6px 12px;              /* Padding reducido para que encaje perfectamente dentro de los 70px */
     border-radius: 4px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-   
-    
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;            /* Clave: evita que el texto se rompa o se corte */
 }
 
 .mobile-whatsapp .social-btn:hover {
-    background-color:#eedca1;
-    color: white;
+    background-color: #dbbf67;
 }
 
 .hamburger {
     display: none;
     font-size: 1.8rem;
-    color: var(--bg-white);
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -107,7 +119,6 @@ nav {
    3. SECCIÓN HERO (Header con Imagen Distintiva Premium)
    ========================================================================== */
 .hero {
-    /* Superposición oscura elegante + Imagen distintiva (mazo de la justicia y libros de derecho) */
     background: linear-gradient(rgba(13, 35, 58, 0.88), rgba(13, 35, 58, 0.88)),
         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
     height: 75vh;
@@ -117,7 +128,6 @@ nav {
     text-align: center;
     padding: 0 20px;
     margin-bottom: var(--section-spacing);
-    /* Separación controlada */
 }
 
 .hero-content h1 {
@@ -129,7 +139,7 @@ nav {
 }
 
 .hero-content p {
-    color:#fff;
+    color: #fff;
     font-size: 1.4rem;
     margin-bottom: 40px;
     font-weight: 400;
@@ -403,12 +413,10 @@ nav {
    ========================================================================== */
 .contacto-section {
     padding: 80px 10%;
-    /* Fondo con imagen legal sutilmente oscurecida */
     background: linear-gradient(rgba(13, 35, 58, 0.94), rgba(13, 35, 58, 0.96)),
         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000&auto=format&fit=crop') no-repeat center center/cover;
     color: var(--bg-white);
     margin-bottom: var(--section-spacing);
-    /* Mantiene alejado el footer */
     border-radius: 8px;
 }
 
@@ -477,19 +485,16 @@ nav {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Inputs claros que contrastan perfectamente */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 14px 18px;
     background-color: #e2e8f0;
-    /* Gris claro que rompe el "bloque oscuro" */
     border: 2px solid transparent;
     border-radius: 6px;
     font-size: 1rem;
     font-family: inherit;
     color: #1a202c;
-    /* Texto oscuro legible */
     transition: var(--transition);
 }
 
@@ -502,7 +507,6 @@ nav {
 .contact-form textarea:focus {
     outline: none;
     background-color: var(--bg-white);
-    /* Blanco puro cuando se activa */
     border: 2px solid var(--secondary-color);
     box-shadow: 0 0 12px rgba(187, 163, 85, 0.2);
 }
@@ -526,6 +530,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;                 /* Permite la caída fluida en elementos móviles */
+    gap: 20px;                       /* Espacio controlado entre bloques */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 30px;
     margin-bottom: 20px;
@@ -564,7 +570,6 @@ nav {
 @media (max-width: 968px) {
     :root {
         --section-spacing: 70px;
-        /* En móviles el espacio se reduce ligeramente */
     }
 
     .about__container,
@@ -583,6 +588,7 @@ nav {
 
     .hamburger {
         display: block;
+        color: #ffffff;
     }
 
     .nav-links {
@@ -592,7 +598,7 @@ nav {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--primary-color);
+        background-color: #162e4a;  /* Mismo color uniforme de barra en móviles */
         padding: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
@@ -600,4 +606,12 @@ nav {
     .nav-links.active {
         display: flex;
     }
-}
+
+    /* NUEVOS AJUSTES RESPONSIVOS PARA EL FOOTER */
+    .footer {
+        padding: 40px 5% 20px;       /* Reducción de espacios laterales excesivos */
+        text-align: center;
+    }
+
+    .footer-top {
+        flex
