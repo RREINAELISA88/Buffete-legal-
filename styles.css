@@ -2,7 +2,7 @@
    1. VARIABLES DE COLOR, FUENTES Y ESPACIADOS
    ========================================================================== */
 :root {
- --primary-color: #2b598b;
+    --primary-color: #0d233a;
     /* Azul marino profundo (Autoridad) */
     --secondary-color: #bba355;
     /* Tu dorado corporativo #bba355 */
@@ -42,7 +42,7 @@ a {
    ========================================================================== */
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     align-items: center;
     padding: 10px 5%;
     background-color: var(--primary-color);
@@ -54,11 +54,10 @@ nav {
 
 
 .logo img {
-    height: 150px;
+    height:150px;
     width: 150px;
     object-fit: contain;
 }
-
 .nav-links {
     display: flex;
     align-items: center;
@@ -80,7 +79,7 @@ nav {
 
 /* Botón de WhatsApp integrado en menú */
 .mobile-whatsapp .social-btn {
-    background-color: #bba355;
+    background-color:#bba355;
     color: white;
     padding: 8px 16px;
     border-radius: 4px;
@@ -88,12 +87,12 @@ nav {
     align-items: center;
     gap: 8px;
     font-size: 0.9rem;
-
-
+   
+    
 }
 
 .mobile-whatsapp .social-btn:hover {
-    background-color: #eedca1;
+    background-color:#eedca1;
     color: white;
 }
 
@@ -130,7 +129,7 @@ nav {
 }
 
 .hero-content p {
-    color: #fff;
+    color:#fff;
     font-size: 1.4rem;
     margin-bottom: 40px;
     font-weight: 400;
@@ -602,46 +601,46 @@ nav {
         display: flex;
     }
 
-    /* ==========================================
+        /* ==========================================
            FORZAR FOOTER EN DOS COLUMNAS EN MÓVIL
            ========================================== */
-    html body .footer {
-        padding: 40px 20px 20px !important;
-        text-align: center !important;
-    }
-
-    html body .footer-top {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        gap: 30px !important;
-    }
-
-    html body .footer-info {
-        width: 100% !important;
-        margin-bottom: 10px !important;
-    }
-
-    /* Transformamos los enlaces en una cuadrícula limpia de 2 columnas */
-    html body .footer-links {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 16px 30px !important;
-        /* 16px de espacio arriba/abajo y 30px entre columnas */
-        justify-items: center !important;
-        align-items: center !important;
-        width: 100% !important;
-        max-width: 320px !important;
-        /* Para que no se estiren de más en pantallas medianas */
-        margin: 0 auto !important;
-        /* Centra todo el bloque de dos columnas */
-    }
-
-    html body .footer-links a {
-        display: block !important;
-        text-align: center !important;
-        white-space: nowrap !important;
-        /* Evita que los nombres de los enlaces se corten feo */
-        font-size: 0.95rem !important;
-    }
+        html body .footer {
+            padding: 40px 20px 20px !important;
+            text-align: center !important;
+        }
+    
+        html body .footer-top {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 30px !important;
+        }
+    
+        html body .footer-info {
+            width: 100% !important;
+            margin-bottom: 10px !important;
+        }
+    
+        /* Transformamos los enlaces en una cuadrícula limpia de 2 columnas */
+        html body .footer-links {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 16px 30px !important;
+            /* 16px de espacio arriba/abajo y 30px entre columnas */
+            justify-items: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            max-width: 320px !important;
+            /* Para que no se estiren de más en pantallas medianas */
+            margin: 0 auto !important;
+            /* Centra todo el bloque de dos columnas */
+        }
+    
+        html body .footer-links a {
+            display: block !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+            /* Evita que los nombres de los enlaces se corten feo */
+            font-size: 0.95rem !important;
+        }
 }
