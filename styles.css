@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 /* ==========================================================================
    1. VARIABLES DE COLOR, FUENTES Y ESPACIADOS
    ========================================================================== */
@@ -42,6 +44,7 @@ a {
    ========================================================================== */
 nav {
     display: flex;
+    height:120px;
     justify-content:space-around;
     align-items: center;
     padding: 10px 5%;
@@ -52,10 +55,14 @@ nav {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .logo img {
-    height:120px;
-    width: 120px;
+    height:180px;
+    width:150px;
     object-fit: contain;
 }
 .nav-links {
@@ -80,7 +87,7 @@ nav {
 /* Botón de WhatsApp integrado en menú */
 .mobile-whatsapp .social-btn {
     background-color:#bba355;
-    color: white;
+    color:var(--bg-white);
     padding: 8px 16px;
     border-radius: 4px;
     display: flex;
@@ -314,7 +321,7 @@ nav {
 
 .card i {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -563,8 +570,8 @@ nav {
    ========================================================================== */
 @media (max-width: 968px) {
     :root {
-        --section-spacing: 70px;
-        /* En móviles el espacio se reduce ligeramente */
+   --section-spacing: 70px;
+  /* En móviles el espacio se reduce ligeramente */
     }
 
     .about__container,
@@ -572,6 +579,9 @@ nav {
         flex-direction: column;
         gap: 30px;
     }
+     .logo img {
+        height:120px;
+        width:120px;}
 
     .hero-content h1 {
         font-size: 2.2rem;
